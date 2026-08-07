@@ -1,6 +1,7 @@
-baseURL = 'https://automatos3d.com/'
+baseURL = 'https://automatos3d.github.io/'
 languageCode = 'en-us'
 title = 'AUTOMATOS 3D'
+publishDir = 'docs'
 
 [params]
   brandName = 'AUTOMATOS 3D'
