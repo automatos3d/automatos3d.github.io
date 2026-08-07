@@ -1,0 +1,70 @@
+{{ define "main" }}
+  <a class="back" href="{{ "" | relURL }}">← Back</a>
+
+  <article class="product">
+    <div class="product__media">
+      {{ $images := .Params.images | default (slice .Params.image) }}
+      <div class="gallery" data-gallery>
+        <div class="gallery__track" data-gallery-track>
+          {{ range $images }}
+            <img class="gallery__slide" src="{{ . | relURL }}" alt="{{ $.Title }}" loading="lazy">
+          {{ end }}
+        </div>
+        <button class="gallery__arrow gallery__arrow--prev" data-gallery-prev aria-label="Previous image"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+        <button class="gallery__arrow gallery__arrow--next" data-gallery-next aria-label="Next image"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+        <div class="gallery__dots" data-gallery-dots></div>
+      </div>
+    </div>
+    <div class="product__info">
+      <p class="product__kicker">{{ .Type | humanize }}</p>
+      <h1 class="product__title">{{ .Title }}</h1>
+      <p class="product__summary">{{ .Params.summary }}</p>
+      <ul class="product__meta">
+        <li><strong>Price</strong><span>{{ .Params.price }}</span></li>
+        <li><strong>Formats</strong><span>{{ .Params.formats }}</span></li>
+        <li><strong>Engine</strong><span>{{ .Params.unity }}</span></li>
+        <li><strong>Build</strong><span>{{ .Params.polygons }}</span></li>
+      </ul>
+      <a class="btn" href="mailto:{{ site.Params.contactEmail }}?subject=Purchase%20%E2%80%94%20{{ .Title | urlquery }}"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>Buy — {{ .Params.price }}</a>
+      <div class="product__body">{{ .Content }}</div>
+      {{ with .Params.included_in }}
+        <div class="bundle-alert">
+          <div class="bundle-alert__head">
+            <i class="fa-solid fa-gift" aria-hidden="true"></i>
+            <span>Buy the bundle and get this asset for a lower price.</span>
+          </div>
+          <div class="bundle-alert__list">
+            {{ range . }}
+              {{ with site.GetPage . }}
+                <a class="bundle-alert__item" href="{{ .RelPermalink }}">
+                  <span>{{ .Title }}</span>
+                  <span class="bundle-alert__price">{{ .Params.price }}</span>
+                </a>
+              {{ end }}
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </article>
+
+  {{ with .Params.youtube | default site.Params.defaultYoutube }}
+    <div class="product__video">
+      <iframe src="https://www.youtube-nocookie.com/embed/{{ . }}" title="{{ $.Title }} video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+    </div>
+  {{ end }}
+
+  {{ $related := where (where .Site.RegularPages "Type" .Type) "Permalink" "!=" .Permalink }}
+  {{ if $related }}
+    <section class="section">
+      <header class="section__head">
+        <h2 class="section__title">More {{ .Type | humanize }}s</h2>
+      </header>
+      <div class="grid">
+        {{ range first 4 $related }}
+          {{ partial "product-card.html" . }}
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,12 @@
+{{ define "main" }}
+  <section class="section">
+    <header class="section__head">
+      <div class="section__titles">
+        <h1 class="section__title">{{ .Title }}</h1>
+        {{ with .Params.subtitle }}<p class="section__sub">{{ . }}</p>{{ end }}
+      </div>
+    </header>
+    {{ $class := cond (eq .Type "assets") "grid--assets" "grid--bundles" }}
+    {{ partial "product-grid.html" (dict "page" . "class" $class) }}
+  </section>
+{{ end }}

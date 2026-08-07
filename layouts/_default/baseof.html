@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "en" }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  <div class="layout">
+    {{ partial "sidebar.html" . }}
+    <main class="main" id="main">
+      {{ block "main" . }}{{ end }}
+      <footer class="site-footer">
+        © {{ now.Year }} {{ site.Params.brandName }} — {{ site.Params.motto }}
+      </footer>
+    </main>
+  </div>
+  <script src="{{ "js/gallery.js" | relURL }}" defer></script>
+  <script src="{{ "js/particles.js" | relURL }}" defer></script>
+  <script src="{{ "js/main.js" | relURL }}" defer></script>
+</body>
+</html>

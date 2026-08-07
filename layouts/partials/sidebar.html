@@ -1,0 +1,29 @@
+<aside class="sidebar">
+  <a class="sidebar__brand" href="{{ "" | relURL }}" aria-label="{{ site.Params.brandName }} home">
+    <img class="sidebar__logo" src="{{ site.Params.logo | relURL }}" alt="{{ site.Params.brandName }} logo" width="64" height="64">
+    <span class="sidebar__name">{{ site.Params.brandName }}</span>
+  </a>
+
+  <p class="sidebar__motto">{{ site.Params.motto }}</p>
+
+  <p class="sidebar__desc">{{ site.Params.description }}</p>
+
+  <nav class="sidebar__nav" aria-label="Sections">
+    <a href="{{ (printf "%s#bundles" ("" | relURL)) }}">Bundles</a>
+    <a href="{{ (printf "%s#assets" ("" | relURL)) }}">Assets</a>
+  </nav>
+
+  <div class="sidebar__contact">
+    <p class="sidebar__contact-label">{{ site.Params.contactLabel }}</p>
+    <div class="sidebar__links">
+      <a class="sidebar__social sidebar__email" href="mailto:{{ site.Params.contactEmail }}" aria-label="Email {{ site.Params.contactEmail }}">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+      </a>
+      {{ range site.Params.contactLinks }}
+        <a class="sidebar__social" href="{{ .url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ .label }}">
+          <i class="fa-brands fa-bluesky" aria-hidden="true"></i>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+</aside>

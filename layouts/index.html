@@ -1,0 +1,36 @@
+{{ define "main" }}
+  <section class="hero">
+    <img class="hero__img" src="{{ site.Params.heroImage | relURL }}" alt="{{ site.Params.brandName }} banner">
+    <div class="hero__shade"></div>
+  </section>
+
+  <section class="section section--bundles" id="bundles">
+    <header class="section__head">
+      <span class="section__num">01</span>
+      <div class="section__titles">
+        <h2 class="section__title">Bundles</h2>
+        {{ with site.GetPage "/bundles" }}
+          {{ with .Params.subtitle }}<p class="section__sub">{{ . }}</p>{{ end }}
+        {{ end }}
+      </div>
+    </header>
+    {{ with site.GetPage "/bundles" }}
+      {{ partial "product-grid.html" (dict "page" . "class" "grid--bundles") }}
+    {{ end }}
+  </section>
+
+  <section class="section section--assets" id="assets">
+    <header class="section__head">
+      <span class="section__num">02</span>
+      <div class="section__titles">
+        <h2 class="section__title">Assets</h2>
+        {{ with site.GetPage "/assets" }}
+          {{ with .Params.subtitle }}<p class="section__sub">{{ . }}</p>{{ end }}
+        {{ end }}
+      </div>
+    </header>
+    {{ with site.GetPage "/assets" }}
+      {{ partial "product-grid.html" (dict "page" . "class" "grid--assets") }}
+    {{ end }}
+  </section>
+{{ end }}

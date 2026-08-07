@@ -1,0 +1,25 @@
+baseURL = 'https://automatos3d.com/'
+languageCode = 'en-us'
+title = 'AUTOMATOS 3D'
+
+[params]
+  brandName = 'AUTOMATOS 3D'
+  motto = 'AI-Generated. Human-Refined. Unity-Tested.'
+  description = 'We forge 3D assets with AI, refine them by hand, and test every model inside the Unity engine — so what you ship looks great and works flawlessly.'
+  contactEmail = 'automatos3d@gmail.com'
+  contactLabel = 'Get in touch'
+  contactLinks = [ { label = 'Bluesky', url = 'https://bsky.app/profile/automatos3d.bsky.social' } ]
+  # Default product video (embed ID) — override per product with `youtube:` in its front matter
+  defaultYoutube = 'YOUR_VIDEO_ID'
+  logo = 'images/brand/icon_big.png'
+  heroImage = 'images/brand/banner_big.jpg'
+
+# No taxonomies are used — keep the output minimal
+disableKinds = ['taxonomy', 'term']
+  # Brand book palette
+  colorInk = '#0E1217'
+  colorTeal = '#49D1D5'
+  colorOlive = '#C1CD7D'
+  colorBrown = '#B88E5F'
+  colorGray = '#E0E0E0'
+  colorPaper = '#F3F3F3'

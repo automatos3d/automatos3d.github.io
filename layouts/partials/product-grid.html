@@ -1,0 +1,5 @@
+<div class="grid {{ with .class }}{{ . }}{{ end }}">
+  {{ range .page.Pages }}
+    {{ partial "product-card.html" . }}
+  {{ end }}
+</div>
