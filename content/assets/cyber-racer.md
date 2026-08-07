@@ -7,6 +7,7 @@ price: "$49"
 formats: ".fbx · .prefab"
 unity: "Unity 2022.3 LTS+"
 polygons: "PBR · Low-poly"
+rigged: "Yes, Vehicle"
 featured: true
 buy_url: "https://assetstore.unity.com/"
 included_in: ["bundles/neon-metropolis"]

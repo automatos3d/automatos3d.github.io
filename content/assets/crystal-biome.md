@@ -7,6 +7,7 @@ price: "$35"
 formats: ".fbx · .prefab"
 unity: "Unity 2022.3 LTS+"
 polygons: "PBR · Low-poly"
+rigged: "No"
 featured: false
 included_in: ["bundles/aegean-ruins"]
 summary: "Translucent crystal clusters, outcroppings, and glowing flora for alien worlds."

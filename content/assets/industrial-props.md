@@ -7,6 +7,8 @@ price: "$25"
 formats: ".fbx · .prefab"
 unity: "Unity 2022.3 LTS+"
 polygons: "PBR · Low-poly"
+rigged: "No"
+triangles: "~8K"
 featured: false
 included_in: ["bundles/neon-metropolis", "bundles/orbital-station"]
 summary: "Crates, pipes, vents, and gantries for factories, docks, and maintenance levels."

@@ -7,6 +7,8 @@ price: "$29"
 formats: ".png · .prefab"
 unity: "Unity 2022.3 LTS+"
 polygons: "UI · 2K"
+rigged: "No"
+triangles: "~4K"
 featured: false
 included_in: ["bundles/neon-metropolis", "bundles/orbital-station"]
 summary: "Teal and olive holographic interface elements for sci-fi menus and HUDs."

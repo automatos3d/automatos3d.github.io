@@ -7,6 +7,7 @@ price: "$33"
 formats: ".fbx · .prefab"
 unity: "Unity 2022.3 LTS+"
 polygons: "PBR · Low-poly"
+rigged: "No"
 featured: false
 included_in: ["bundles/ironclad-forge"]
 summary: "Eight sci-fi firearms with reload animations and muzzle flash prefabs."

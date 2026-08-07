@@ -37,6 +37,8 @@
         <li><strong>Formats</strong><span>{{ .Params.formats }}</span></li>
         <li><strong>Engine</strong><span>{{ .Params.unity }}</span></li>
         <li><strong>Build</strong><span>{{ .Params.polygons }}</span></li>
+        <li><strong>Rigged</strong><span>{{ .Params.rigged | default site.Params.defaultRigged }}</span></li>
+        <li><strong>Triangles</strong><span>{{ .Params.triangles | default site.Params.defaultTriangles }}</span></li>
         {{ if eq $bundle.Type "bundle" }}
           {{ $count := len $members }}
           <li><strong>Assets in bundle</strong><span class="stat">{{ $count }}</span></li>

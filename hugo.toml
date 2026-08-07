@@ -12,6 +12,8 @@ publishDir = 'docs'
   contactLinks = [ { label = 'Bluesky', url = 'https://bsky.app/profile/automatos3d.bsky.social' } ]
   # Default product video (embed ID) — override per product with `youtube:` in its front matter
   defaultYoutube = 'YOUR_VIDEO_ID'
+  defaultRigged = 'Yes, Humanoid'
+  defaultTriangles = '~20K'
   logo = 'images/brand/icon_big.png'
   heroImage = 'images/brand/banner_big.jpg'
 
@@ -20,10 +22,3 @@ disableKinds = ['taxonomy', 'term']
 
 [markup.goldmark.renderer]
   unsafe = true
-  # Brand book palette
-  colorInk = '#0E1217'
-  colorTeal = '#49D1D5'
-  colorOlive = '#C1CD7D'
-  colorBrown = '#B88E5F'
-  colorGray = '#E0E0E0'
-  colorPaper = '#F3F3F3'
