@@ -365,7 +365,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: clamp(24px, 4vw, 56px);
-  align-items: start;
+  align-items: stretch;
 }
 
 .product__media {
@@ -384,6 +384,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 .gallery {
   position: relative;
   aspect-ratio: 4 / 3;
+  height: 100%;
   overflow: hidden;
 }
 
@@ -725,6 +726,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   .sidebar { padding: 28px 22px; }
   .product { grid-template-columns: 1fr; }
   .product__media { position: static; }
+  .gallery { height: auto; }
 }
 
 @media (max-width: 760px) {
