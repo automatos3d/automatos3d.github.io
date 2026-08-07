@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <a class="back" href="{{ "" | relURL }}">← Back</a>
+
+  <section class="page">
+    <header class="section__head">
+      <span class="section__num">03</span>
+      <div class="section__titles">
+        <h1 class="section__title">{{ .Title }}</h1>
+      </div>
+    </header>
+    <div class="faq">{{ .Content }}</div>
+  </section>
+{{ end }}

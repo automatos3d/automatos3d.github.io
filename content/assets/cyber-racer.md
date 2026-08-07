@@ -8,6 +8,8 @@ formats: ".fbx · .prefab"
 unity: "Unity 2022.3 LTS+"
 polygons: "PBR · Low-poly"
 featured: true
+buy_url: "https://assetstore.unity.com/"
+included_in: ["bundles/neon-metropolis"]
 summary: "A sleek anti-grav racer with emissive underglow and damageable body parts."
 ---
 

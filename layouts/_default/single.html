@@ -1,4 +1,17 @@
 {{ define "main" }}
+  {{ $bundle := . }}
+  {{ $bpath := strings.TrimPrefix "/" (strings.TrimSuffix "/" $bundle.RelPermalink) }}
+  {{ $scratch := newScratch }}
+  {{ $scratch.Set "members" slice }}
+  {{ if eq $bundle.Type "bundle" }}
+    {{ range where site.RegularPages "Section" "assets" }}
+      {{ if in (.Params.included_in | default slice) $bpath }}
+        {{ $scratch.Add "members" (slice .) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $members := $scratch.Get "members" }}
+
   <a class="back" href="{{ "" | relURL }}">← Back</a>
 
   <article class="product">
@@ -24,8 +37,17 @@
         <li><strong>Formats</strong><span>{{ .Params.formats }}</span></li>
         <li><strong>Engine</strong><span>{{ .Params.unity }}</span></li>
         <li><strong>Build</strong><span>{{ .Params.polygons }}</span></li>
+        {{ if eq $bundle.Type "bundle" }}
+          {{ $count := len $members }}
+          <li><strong>Assets in bundle</strong><span class="stat">{{ $count }}</span></li>
+          <li><strong>Per asset</strong><span class="stat">{{ if gt $count 0 }}{{ $price := strings.TrimPrefix "$" $bundle.Params.price }}{{ $perCents := math.Round (div (mul (float $price) 100.0) (float $count)) }}{{ printf "$%.2f" (div $perCents 100.0) }}{{ else }}—{{ end }}</span></li>
+        {{ end }}
       </ul>
-      <a class="btn" href="mailto:{{ site.Params.contactEmail }}?subject=Purchase%20%E2%80%94%20{{ .Title | urlquery }}"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>Buy — {{ .Params.price }}</a>
+      {{ with .Params.buy_url }}
+        <a class="btn" href="{{ . }}" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>Buy</a>
+      {{ else }}
+        <p class="coming-soon"><i class="fa-solid fa-hourglass-half" aria-hidden="true"></i>Coming soon</p>
+      {{ end }}
       <div class="product__body">{{ .Content }}</div>
       {{ with .Params.included_in }}
         <div class="bundle-alert">
@@ -48,10 +70,28 @@
     </div>
   </article>
 
-  {{ with .Params.youtube | default site.Params.defaultYoutube }}
-    <div class="product__video">
-      <iframe src="https://www.youtube-nocookie.com/embed/{{ . }}" title="{{ $.Title }} video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
-    </div>
+  {{ if eq $bundle.Type "bundle" }}
+    {{ if gt (len $members) 0 }}
+      <div class="videos">
+        <h2 class="videos__title">Videos</h2>
+        <div class="videos__grid">
+          {{ range $members }}
+            {{ $asset := . }}
+            {{ with $asset.Params.youtube | default site.Params.defaultYoutube }}
+              <div class="videos__item">
+                <iframe src="https://www.youtube-nocookie.com/embed/{{ . }}" title="{{ $asset.Title }} video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+              </div>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    {{ end }}
+  {{ else }}
+    {{ with .Params.youtube | default site.Params.defaultYoutube }}
+      <div class="product__video">
+        <iframe src="https://www.youtube-nocookie.com/embed/{{ . }}" title="{{ $.Title }} video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
+      </div>
+    {{ end }}
   {{ end }}
 
   {{ $related := where (where .Site.RegularPages "Type" .Type) "Permalink" "!=" .Permalink }}

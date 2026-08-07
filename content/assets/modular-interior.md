@@ -8,6 +8,7 @@ formats: ".fbx · .prefab"
 unity: "Unity 2022.3 LTS+"
 polygons: "PBR · Low-poly"
 featured: true
+included_in: ["bundles/neon-metropolis"]
 summary: "Snap-together walls, floors, and fixtures for interiors in any scale."
 ---
 

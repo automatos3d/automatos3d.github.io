@@ -8,6 +8,7 @@ formats: ".fbx · .prefab · .mat"
 unity: "Unity 2022.3 LTS+"
 polygons: "PBR · Low-poly"
 featured: true
+buy_url: "https://assetstore.unity.com/"
 summary: "Habitation rings, docking bays, and a central hub for space-based levels."
 ---
 

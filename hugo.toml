@@ -5,8 +5,8 @@ publishDir = 'docs'
 
 [params]
   brandName = 'AUTOMATOS 3D'
-  motto = 'AI-Generated. Human-Refined. Unity-Tested.'
-  description = 'We forge 3D assets with AI, refine them by hand, and test every model inside the Unity engine — so what you ship looks great and works flawlessly.'
+  motto = "AI-Generated. Human-Refined.\nUnity-Tested."
+  description = "We forge 3D assets with AI, refine them by hand and test every model inside the Unity engine.\n\nSo what you ship looks great and works flawlessly."
   contactEmail = 'automatos3d@gmail.com'
   contactLabel = 'Get in touch'
   contactLinks = [ { label = 'Bluesky', url = 'https://bsky.app/profile/automatos3d.bsky.social' } ]
@@ -17,6 +17,9 @@ publishDir = 'docs'
 
 # No taxonomies are used — keep the output minimal
 disableKinds = ['taxonomy', 'term']
+
+[markup.goldmark.renderer]
+  unsafe = true
   # Brand book palette
   colorInk = '#0E1217'
   colorTeal = '#49D1D5'

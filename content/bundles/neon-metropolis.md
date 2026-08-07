@@ -8,6 +8,7 @@ formats: ".fbx · .prefab · .mat"
 unity: "Unity 2022.3 LTS+"
 polygons: "PBR · Low-poly"
 featured: true
+buy_url: "https://assetstore.unity.com/"
 summary: "A modular cyberpunk city kit for dense, glowing night streets."
 ---
 

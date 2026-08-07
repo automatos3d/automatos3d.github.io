@@ -8,7 +8,8 @@ formats: ".fbx · .prefab"
 unity: "Unity 2022.3 LTS+"
 polygons: "PBR · Low-poly"
 featured: true
-included_in: ["bundles/orbital-station"]
+buy_url: "https://assetstore.unity.com/"
+included_in: ["bundles/orbital-station", "bundles/ironclad-forge"]
 summary: "A two-legged war machine with an optional rig and idle/aim animations."
 ---
 
