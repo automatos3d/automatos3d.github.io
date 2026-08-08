@@ -9,6 +9,18 @@ layout: "faq"
 
 We use the latest generation tools for modeling, texturing, and animation. That is exactly why we can keep our prices this low: AI lets us produce a large amount of variety in a fraction of the time a traditional studio would need.
 
+## What process do you follow to improve the models?
+
+**By hand, step by step.** Once the AI proposes a model, we rebuild it manually.
+
+**First** we rework the topology, drawing clean edge loops over the generated mesh so it deforms naturally and keeps a proper silhouette at game resolution.
+
+**Then** we re-unwrap the UVs and bake the textures into a clean PBR set (base color, normal, roughness, metallic, and ambient occlusion) so the materials respond correctly to real-time lighting.
+
+**Finally**, for characters, we rig them by hand and set them up as Humanoid Avatars, then test everything inside the Unity editor.
+
+It is slower than letting the AI run on its own, but it is exactly what turns a good AI output into a game-ready asset.
+
 ## Will I run into any copyright issues?
 
 **None**.
