@@ -10,7 +10,11 @@
       </div>
     </header>
     {{ with site.GetPage "/bundles" }}
-      {{ partial "product-grid.html" (dict "page" . "class" "grid--bundles") }}
+      {{ if gt (len (where .Pages ".Params.show" "ne" false)) 0 }}
+        {{ partial "product-grid.html" (dict "page" . "class" "grid--bundles") }}
+      {{ else }}
+        <p class="coming-soon--big">Coming soon</p>
+      {{ end }}
     {{ end }}
   </section>
 
@@ -25,7 +29,11 @@
       </div>
     </header>
     {{ with site.GetPage "/assets" }}
-      {{ partial "product-grid.html" (dict "page" . "class" "grid--assets") }}
+      {{ if gt (len (where .Pages ".Params.show" "ne" false)) 0 }}
+        {{ partial "product-grid.html" (dict "page" . "class" "grid--assets") }}
+      {{ else }}
+        <p class="coming-soon--big">Coming soon</p>
+      {{ end }}
     {{ end }}
   </section>
 {{ end }}

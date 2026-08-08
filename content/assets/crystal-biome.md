@@ -1,11 +1,12 @@
 ---
 title: "Crystal Biome"
+show: false
 type: "asset"
 image: "/images/products/crystal-biome.svg"
 images: ["/images/products/crystal-biome.svg", "/images/products/crystal-biome-2.svg", "/images/products/crystal-biome-3.svg"]
 price: "$35"
 formats: ".fbx · .prefab"
-unity: "Unity 2022.3 LTS+"
+unity: "Unity 6000.0 +"
 polygons: "PBR · Low-poly"
 rigged: "No"
 featured: false

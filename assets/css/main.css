@@ -574,6 +574,21 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 
 .coming-soon i { color: var(--accent); font-size: 0.95rem; }
 
+.coming-soon--big {
+  margin: 0;
+  padding: 48px 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(2.5rem, 9vw, 6.5rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--ink);
+  opacity: 0.12;
+  user-select: none;
+  white-space: nowrap;
+}
+
 .product__body {
   margin-top: 32px;
   color: var(--ink);
@@ -674,6 +689,21 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--surface-2);
+}
+
+/* ---------- 3D model viewer ---------- */
+
+.sf-viewer {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.sf-viewer iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 /* ---------- FAQ ---------- */

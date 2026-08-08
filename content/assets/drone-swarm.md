@@ -1,11 +1,12 @@
 ---
 title: "Drone Swarm"
+show: false
 type: "asset"
 image: "/images/products/drone-swarm.svg"
 images: ["/images/products/drone-swarm.svg", "/images/products/drone-swarm-2.svg", "/images/products/drone-swarm-3.svg"]
 price: "$45"
 formats: ".fbx · .prefab"
-unity: "Unity 2022.3 LTS+"
+unity: "Unity 6000.0 +"
 polygons: "PBR · Low-poly"
 featured: false
 included_in: ["bundles/orbital-station"]

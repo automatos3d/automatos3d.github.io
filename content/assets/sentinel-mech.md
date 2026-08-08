@@ -1,11 +1,12 @@
 ---
 title: "Sentinel Mech"
+show: false
 type: "asset"
 image: "/images/products/sentinel-mech.svg"
 images: ["/images/products/sentinel-mech.svg", "/images/products/sentinel-mech-2.svg", "/images/products/sentinel-mech-3.svg"]
 price: "$39"
 formats: ".fbx · .prefab"
-unity: "Unity 2022.3 LTS+"
+unity: "Unity 6000.0 +"
 polygons: "PBR · Low-poly"
 featured: true
 buy_url: "https://assetstore.unity.com/"

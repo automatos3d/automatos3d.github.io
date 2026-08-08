@@ -11,7 +11,6 @@ publishDir = 'docs'
   contactLabel = 'Get in touch'
   contactLinks = [ { label = 'Bluesky', url = 'https://bsky.app/profile/automatos3d.bsky.social' } ]
   # Default product video (embed ID) — override per product with `youtube:` in its front matter
-  defaultYoutube = 'YOUR_VIDEO_ID'
   defaultRigged = 'Yes, Humanoid'
   defaultTriangles = '~20K'
   logo = 'images/brand/icon_big.png'

@@ -1,11 +1,12 @@
 ---
 title: "Aegean Ruins"
+show: false
 type: "bundle"
 image: "/images/products/aegean-ruins.svg"
 images: ["/images/products/aegean-ruins.svg", "/images/products/aegean-ruins-2.svg", "/images/products/aegean-ruins-3.svg"]
 price: "$99"
 formats: ".fbx · .prefab · .mat"
-unity: "Unity 2022.3 LTS+"
+unity: "Unity 6000.0 +"
 polygons: "PBR · Low-poly"
 featured: false
 summary: "Classical architecture fused with machine decay, ready for ruins and broken sanctuaries."

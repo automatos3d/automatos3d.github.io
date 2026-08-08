@@ -7,6 +7,10 @@
       </div>
     </header>
     {{ $class := cond (eq .Type "assets") "grid--assets" "grid--bundles" }}
-    {{ partial "product-grid.html" (dict "page" . "class" $class) }}
+    {{ if gt (len (where .Pages ".Params.show" "ne" false)) 0 }}
+      {{ partial "product-grid.html" (dict "page" . "class" $class) }}
+    {{ else }}
+      <p class="coming-soon--big">Coming soon</p>
+    {{ end }}
   </section>
 {{ end }}

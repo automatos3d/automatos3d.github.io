@@ -1,11 +1,12 @@
 ---
 title: "Orbital Station Core"
+show: false
 type: "bundle"
 image: "/images/products/orbital-station.svg"
 images: ["/images/products/orbital-station.svg", "/images/products/orbital-station-2.svg", "/images/products/orbital-station-3.svg"]
 price: "$179"
 formats: ".fbx · .prefab · .mat"
-unity: "Unity 2022.3 LTS+"
+unity: "Unity 6000.0 +"
 polygons: "PBR · Low-poly"
 featured: true
 buy_url: "https://assetstore.unity.com/"

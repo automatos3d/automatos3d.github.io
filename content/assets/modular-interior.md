@@ -1,11 +1,12 @@
 ---
 title: "Modular Interior Kit"
+show: false
 type: "asset"
 image: "/images/products/modular-interior.svg"
 images: ["/images/products/modular-interior.svg", "/images/products/modular-interior-2.svg", "/images/products/modular-interior-3.svg"]
 price: "$59"
 formats: ".fbx · .prefab"
-unity: "Unity 2022.3 LTS+"
+unity: "Unity 6000.0 +"
 polygons: "PBR · Low-poly"
 featured: true
 included_in: ["bundles/neon-metropolis"]

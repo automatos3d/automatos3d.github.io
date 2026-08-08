@@ -4,7 +4,7 @@
   {{ $scratch := newScratch }}
   {{ $scratch.Set "members" slice }}
   {{ if eq $bundle.Type "bundle" }}
-    {{ range where site.RegularPages "Section" "assets" }}
+    {{ range where (where site.RegularPages "Section" "assets") ".Params.show" "ne" false }}
       {{ if in (.Params.included_in | default slice) $bpath }}
         {{ $scratch.Add "members" (slice .) }}
       {{ end }}
@@ -74,14 +74,30 @@
     </div>
   </article>
 
+  {{ with .Params.sketchfab }}
+    <section class="section">
+      <div class="sf-viewer">
+        <iframe title="{{ $.Title }} — 3D preview" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share src="https://sketchfab.com/models/{{ . }}/embed?autostart=1&camera_controls=1&ui_infos=0&ui_controls=1"></iframe>
+      </div>
+    </section>
+  {{ end }}
+
   {{ if eq $bundle.Type "bundle" }}
-    {{ if gt (len $members) 0 }}
+    {{ $scratchV := newScratch }}
+    {{ $scratchV.Set "vidMembers" slice }}
+    {{ range $members }}
+      {{ if .Params.youtube }}
+        {{ $scratchV.Add "vidMembers" (slice .) }}
+      {{ end }}
+    {{ end }}
+    {{ $vidMembers := $scratchV.Get "vidMembers" }}
+    {{ if gt (len $vidMembers) 0 }}
       <div class="videos">
         <h2 class="videos__title">Videos</h2>
         <div class="videos__grid">
-          {{ range $members }}
+          {{ range $vidMembers }}
             {{ $asset := . }}
-            {{ with $asset.Params.youtube | default site.Params.defaultYoutube }}
+            {{ with $asset.Params.youtube }}
               <div class="videos__item">
                 <iframe src="https://www.youtube-nocookie.com/embed/{{ . }}" title="{{ $asset.Title }} video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
               </div>
@@ -91,7 +107,7 @@
       </div>
     {{ end }}
   {{ else }}
-    {{ with .Params.youtube | default site.Params.defaultYoutube }}
+    {{ with .Params.youtube }}
       <div class="product__video">
         <iframe src="https://www.youtube-nocookie.com/embed/{{ . }}" title="{{ $.Title }} video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
       </div>
@@ -99,6 +115,7 @@
   {{ end }}
 
   {{ $related := where (where .Site.RegularPages "Type" .Type) "Permalink" "!=" .Permalink }}
+  {{ $related = where $related ".Params.show" "ne" false }}
   {{ if $related }}
     <section class="section">
       <header class="section__head">

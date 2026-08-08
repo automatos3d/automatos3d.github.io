@@ -1,5 +1,6 @@
 <div class="grid {{ with .class }}{{ . }}{{ end }}">
-  {{ range .page.Pages }}
+  {{ $pages := where .page.Pages ".Params.show" "ne" false }}
+  {{ range $pages }}
     {{ partial "product-card.html" . }}
   {{ end }}
 </div>

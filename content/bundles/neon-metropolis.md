@@ -1,11 +1,12 @@
 ---
 title: "Neon Metropolis"
+show: false
 type: "bundle"
 image: "/images/products/neon-metropolis.svg"
 images: ["/images/products/neon-metropolis.svg", "/images/products/neon-metropolis-2.svg", "/images/products/neon-metropolis-3.svg"]
 price: "$149"
 formats: ".fbx · .prefab · .mat"
-unity: "Unity 2022.3 LTS+"
+unity: "Unity 6000.0 +"
 polygons: "PBR · Low-poly"
 featured: true
 buy_url: "https://assetstore.unity.com/"

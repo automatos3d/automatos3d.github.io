@@ -1,11 +1,12 @@
 ---
 title: "Cyber Racer"
+show: false
 type: "asset"
 image: "/images/products/cyber-racer.svg"
 images: ["/images/products/cyber-racer.svg", "/images/products/cyber-racer-2.svg", "/images/products/cyber-racer-3.svg"]
 price: "$49"
 formats: ".fbx · .prefab"
-unity: "Unity 2022.3 LTS+"
+unity: "Unity 6000.0 +"
 polygons: "PBR · Low-poly"
 rigged: "Yes, Vehicle"
 featured: true

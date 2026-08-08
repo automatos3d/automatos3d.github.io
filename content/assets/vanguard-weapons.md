@@ -1,11 +1,12 @@
 ---
 title: "Vanguard Weapons"
+show: false
 type: "asset"
 image: "/images/products/vanguard-weapons.svg"
 images: ["/images/products/vanguard-weapons.svg", "/images/products/vanguard-weapons-2.svg", "/images/products/vanguard-weapons-3.svg"]
 price: "$33"
 formats: ".fbx · .prefab"
-unity: "Unity 2022.3 LTS+"
+unity: "Unity 6000.0 +"
 polygons: "PBR · Low-poly"
 rigged: "No"
 featured: false

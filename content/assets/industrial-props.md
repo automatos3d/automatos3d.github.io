@@ -1,11 +1,12 @@
 ---
 title: "Industrial Props"
+show: false
 type: "asset"
 image: "/images/products/industrial-props.svg"
 images: ["/images/products/industrial-props.svg", "/images/products/industrial-props-2.svg", "/images/products/industrial-props-3.svg"]
 price: "$25"
 formats: ".fbx · .prefab"
-unity: "Unity 2022.3 LTS+"
+unity: "Unity 6000.0 +"
 polygons: "PBR · Low-poly"
 rigged: "No"
 triangles: "~8K"

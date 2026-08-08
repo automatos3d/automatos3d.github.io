@@ -1,11 +1,12 @@
 ---
 title: "Holographic UI Kit"
+show: false
 type: "asset"
 image: "/images/products/holo-ui-kit.svg"
 images: ["/images/products/holo-ui-kit.svg", "/images/products/holo-ui-kit-2.svg", "/images/products/holo-ui-kit-3.svg"]
 price: "$29"
 formats: ".png · .prefab"
-unity: "Unity 2022.3 LTS+"
+unity: "Unity 6000.0 +"
 polygons: "UI · 2K"
 rigged: "No"
 triangles: "~4K"

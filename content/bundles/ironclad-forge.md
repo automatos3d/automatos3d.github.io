@@ -1,11 +1,12 @@
 ---
 title: "Ironclad Forge"
+show: false
 type: "bundle"
 image: "/images/products/ironclad-forge.svg"
 images: ["/images/products/ironclad-forge.svg", "/images/products/ironclad-forge-2.svg", "/images/products/ironclad-forge-3.svg"]
 price: "$89"
 formats: ".fbx · .prefab · .mat"
-unity: "Unity 2022.3 LTS+"
+unity: "Unity 6000.0 +"
 polygons: "PBR · Low-poly"
 featured: false
 summary: "Fantasy smithing, workshop, and siege-props pack with warm forged-iron tones."
