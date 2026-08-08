@@ -1,61 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480" role="img" aria-label="vanguard weapons">
   <defs>
-    <radialGradient id="glow" cx="50%" cy="42%" r="60%">
-      <stop offset="0%" stop-color="#49D1D5" stop-opacity="0.14"/>
-      <stop offset="60%" stop-color="#49D1D5" stop-opacity="0.03"/>
-      <stop offset="100%" stop-color="#0E1217" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="scan" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#49D1D5" stop-opacity="0.08"/>
-      <stop offset="50%" stop-color="#49D1D5" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#49D1D5" stop-opacity="0.08"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FAF9F6"/>
+      <stop offset="100%" stop-color="#F1EFE9"/>
     </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#CC785C" stop-opacity="0.16"/>
+      <stop offset="60%" stop-color="#CC785C" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#CC785C" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <rect width="640" height="480" fill="#0E1217"/>
+  <rect width="640" height="480" fill="url(#bg)"/>
   <rect width="640" height="480" fill="url(#glow)"/>
-  <rect width="640" height="480" fill="url(#scan)"/>
-  <line x1="-248.8888888888889" y1="480" x2="320" y2="297.6" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="-177.77777777777783" y1="480" x2="320" y2="297.6" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="-106.66666666666669" y1="480" x2="320" y2="297.6" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="-35.55555555555554" y1="480" x2="320" y2="297.6" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="35.55555555555554" y1="480" x2="320" y2="297.6" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="106.66666666666666" y1="480" x2="320" y2="297.6" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="177.77777777777777" y1="480" x2="320" y2="297.6" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="248.88888888888889" y1="480" x2="320" y2="297.6" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="320" y1="480" x2="320" y2="297.6" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="391.1111111111111" y1="480" x2="320" y2="297.6" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="462.22222222222223" y1="480" x2="320" y2="297.6" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="533.3333333333334" y1="480" x2="320" y2="297.6" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="604.4444444444445" y1="480" x2="320" y2="297.6" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="675.5555555555555" y1="480" x2="320" y2="297.6" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="746.6666666666667" y1="480" x2="320" y2="297.6" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="817.7777777777778" y1="480" x2="320" y2="297.6" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="888.8888888888889" y1="480" x2="320" y2="297.6" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="293.3333333333333" y1="298.8666666666667" x2="346.6666666666667" y2="298.8666666666667" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="266.6666666666667" y1="302.6666666666667" x2="373.3333333333333" y2="302.6666666666667" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="240" y1="309" x2="400" y2="309" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="213.33333333333334" y1="317.8666666666667" x2="426.66666666666663" y2="317.8666666666667" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="186.66666666666666" y1="329.2666666666667" x2="453.33333333333337" y2="329.2666666666667" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="160" y1="343.20000000000005" x2="480" y2="343.20000000000005" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="133.33333333333331" y1="359.6666666666667" x2="506.6666666666667" y2="359.6666666666667" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="106.66666666666669" y1="378.6666666666667" x2="533.3333333333333" y2="378.6666666666667" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="80" y1="400.20000000000005" x2="560" y2="400.20000000000005" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="53.333333333333314" y1="424.2666666666667" x2="586.6666666666667" y2="424.2666666666667" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="26.666666666666686" y1="450.8666666666667" x2="613.3333333333333" y2="450.8666666666667" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <line x1="0" y1="480" x2="640" y2="480" stroke="rgba(73,209,213,0.16)" stroke-width="1"/>
-  <rect x="18" y="18" width="604" height="444" fill="none" stroke="rgba(73,209,213,0.06)" stroke-width="1"/>
-  <g stroke="#49D1D5" stroke-width="1.2" fill="none" opacity="0.9">
-  <ellipse cx="320" cy="270" rx="115" ry="28.75"/>
-  <ellipse cx="320" cy="270" rx="28.75" ry="115"/>
-  <ellipse cx="320" cy="270" rx="115" ry="57.5"/>
-  <ellipse cx="320" cy="270" rx="57.5" ry="115"/>
-  <ellipse cx="320" cy="270" rx="115" ry="86.25"/>
-  <ellipse cx="320" cy="270" rx="86.25" ry="115"/>
-  <ellipse cx="320" cy="270" rx="115" ry="115"/>
-  <ellipse cx="320" cy="270" rx="115" ry="115"/>
+  <line x1="-128" y1="480" x2="320" y2="288" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="-64" y1="480" x2="320" y2="288" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="0" y1="480" x2="320" y2="288" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="64" y1="480" x2="320" y2="288" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="128" y1="480" x2="320" y2="288" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="192" y1="480" x2="320" y2="288" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="256" y1="480" x2="320" y2="288" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="320" y1="480" x2="320" y2="288" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="384" y1="480" x2="320" y2="288" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="448" y1="480" x2="320" y2="288" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="512" y1="480" x2="320" y2="288" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="576" y1="480" x2="320" y2="288" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="640" y1="480" x2="320" y2="288" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="704" y1="480" x2="320" y2="288" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="768" y1="480" x2="320" y2="288" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="288" y1="289.92" x2="352" y2="289.92" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="256" y1="295.68" x2="384" y2="295.68" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="224" y1="305.28" x2="416" y2="305.28" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="192" y1="318.72" x2="448" y2="318.72" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="160" y1="336" x2="480" y2="336" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="128" y1="357.12" x2="512" y2="357.12" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="96" y1="382.08" x2="544" y2="382.08" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="64" y1="410.88" x2="576" y2="410.88" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="32" y1="443.52" x2="608" y2="443.52" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <line x1="0" y1="480" x2="640" y2="480" stroke="rgba(184, 142, 95, 0.18)" stroke-width="1"/>
+  <ellipse cx="320" cy="398" rx="130" ry="22" fill="#1F1E1B" opacity="0.08"/>
+  
+  <g stroke="#CC785C" stroke-width="1.6" fill="none" opacity="0.95">
+    <polyline points="320,173 205,326.9 251,355.4 320,326.9 389,355.4 435,326.9 320,173"/>
+    <line x1="320" y1="173" x2="320" y2="355.4" stroke="#A85B41" stroke-width="1.2"/>
   </g>
-  <circle cx="170" cy="180" r="60" stroke="#B88E5F" stroke-width="1.4" fill="none" opacity="0.5" stroke-dasharray="4 6"/>
-  <circle cx="470" cy="350" r="46" stroke="#B88E5F" stroke-width="1.4" fill="none" opacity="0.45" stroke-dasharray=""/>
-  <line x1="30" y1="30" x2="140" y2="30" stroke="#49D1D5" stroke-width="2" opacity="0.7"/>
-  <circle cx="20" cy="30" r="3" fill="#49D1D5" opacity="0.8"/>
+  <circle cx="170" cy="176" r="62" stroke="#CC785C" stroke-width="1.4" fill="none" opacity="0.45" stroke-dasharray="4 7"/>
+  <circle cx="470" cy="350" r="48" stroke="#CC785C" stroke-width="1.4" fill="none" opacity="0.4" stroke-dasharray=""/>
+  <line x1="28" y1="30" x2="150" y2="30" stroke="#CC785C" stroke-width="3"/>
+  <circle cx="18" cy="30" r="3.5" fill="#CC785C"/>
+  <rect x="16" y="444" width="90" height="3" fill="#B88E5F" opacity="0.6"/>
 </svg>

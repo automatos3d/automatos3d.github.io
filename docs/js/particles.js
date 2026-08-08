@@ -6,7 +6,7 @@
   const ctx = canvas.getContext('2d');
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const COLORS = ['#C1CD7D', '#B88E5F', '#49D1D5', '#E0E0E0'];
+  const COLORS = ['#CC785C', '#B88E5F', '#D9C6B3', '#8FA0AB'];
 
   let W = 0, H = 0, dpr = 1;
 
@@ -25,21 +25,21 @@
 
   // ---- ambient particles ----
   const ambient = [];
-  const count = reduce ? 0 : Math.min(80, Math.round((W * H) / 22000));
+  const count = reduce ? 0 : Math.min(110, Math.round((W * H) / 15000));
 
   function makeAmbient() {
     return {
       x: Math.random() * W,
       y: Math.random() * H,
-      r: 0.5 + Math.random() * 1.3,
-      vx: (Math.random() - 0.5) * 5,
-      vy: -(3 + Math.random() * 10),
+      r: 1 + Math.random() * 2.2,
+      vx: (Math.random() - 0.5) * 6,
+      vy: -(4 + Math.random() * 12),
       sway: Math.random() * Math.PI * 2,
       swaySpeed: 0.3 + Math.random() * 0.6,
       phase: Math.random() * Math.PI * 2,
       twinkle: 0.4 + Math.random() * 2,
       color: COLORS[Math.floor(Math.random() * COLORS.length)],
-      alpha: 0.1 + Math.random() * 0.28,
+      alpha: 0.22 + Math.random() * 0.3,
     };
   }
   for (let i = 0; i < count; i++) ambient.push(makeAmbient());
@@ -100,16 +100,16 @@
       p.life -= p.decay;
       if (p.life <= 0) { pings.splice(i, 1); continue; }
       const r = (1 - p.life) * p.maxR;
-      ctx.globalAlpha = Math.max(0, p.life) * 0.6;
+      ctx.globalAlpha = Math.max(0, p.life) * 0.85;
       ctx.strokeStyle = p.color;
-      ctx.lineWidth = 1.4;
+      ctx.lineWidth = 1.6;
       ctx.beginPath();
       ctx.arc(p.x, p.y, r + 2, 0, Math.PI * 2);
       ctx.stroke();
       ctx.fillStyle = p.color;
-      ctx.globalAlpha = Math.max(0, p.life) * 0.5;
+      ctx.globalAlpha = Math.max(0, p.life) * 0.7;
       ctx.beginPath();
-      ctx.arc(p.x, p.y, 1.6, 0, Math.PI * 2);
+      ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
       ctx.fill();
     }
 
