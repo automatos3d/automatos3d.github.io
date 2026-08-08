@@ -3,7 +3,7 @@ title: "F.A.Q."
 layout: "faq"
 ---
 
-## Are your models AI-generated?
+## Are your assets AI-generated?
 
 **Yes**.
 
@@ -14,6 +14,30 @@ We use the latest generation tools for modeling, texturing, and animation. That 
 **None**.
 
 Once you purchase an asset or a bundle, it is yours to use in all of your projects, commercial or not, with no extra fees and no credit required.
+
+## Which formats and pipelines are supported?
+
+All assets ship as **FBX** with **PBR** materials and Unity prefabs, tuned for the Universal Render Pipeline (URP) and built for Unity 6000.0 LTS and newer.
+
+## Are the characters rigged?
+
+**Yes**.
+
+All the characters have been rigged and imported into Unity as [Humanoid Avatar](https://docs.unity3d.com/6000.5/Documentation/Manual/AvatarCreationandSetup.html), so you'll be able to apply your own animations without any problems.
+
+The faces are **not animated**, the inside of the mouth is **not modeled**, and **no animations** are included.
+
+## Do the assets work out of the box in Unity?
+
+**They do**.
+
+Every asset is imported and tested inside the Unity editor before it is published, so pivots, prefabs and materials behave exactly as expected.
+
+## Can I use them in other engines or tools?
+
+**Yes**.
+
+Because everything is delivered as standard FBX with PBR textures, you can import the assets into Unreal Engine, Godot, Blender, Maya, or any other tool that reads FBX.
 
 ## Do I need to say that my game uses AI?
 
@@ -27,21 +51,6 @@ For example, on [Steam](https://store.steampowered.com/news/group/4145017/view/3
 
 We review and correct everything the AI produces, but on very close inspection you may still notice small imperfections, especially in the textures. For this reason we recommend avoiding extreme close-ups in your shots.
 
-## Do the assets work out of the box in Unity?
-
-**They do**.
-
-Every model is imported and tested inside the Unity editor before it is published, so pivots, prefabs and materials behave exactly as expected. No cleanup required.
-
-## Which formats and pipelines are supported?
-
-All products ship as **FBX** with **PBR** materials and Unity prefabs, tuned for the Universal Render Pipeline (URP) and built for Unity 6000.0 LTS and newer.
-
-## Can I use them in other engines or tools?
-
-**Yes**.
-
-Because everything is delivered as standard FBX with PBR textures, you can import the assets into Unreal Engine, Blender, Maya, or any other tool that reads FBX.
 
 ## What if a product does not match its description?
 

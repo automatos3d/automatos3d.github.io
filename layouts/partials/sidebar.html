@@ -9,9 +9,9 @@
   <p class="sidebar__desc">{{ site.Params.description }}</p>
 
   <nav class="sidebar__nav" aria-label="Sections">
-    <a href="{{ (printf "%s#bundles" ("" | relURL)) }}">Bundles</a>
-    <a href="{{ (printf "%s#assets" ("" | relURL)) }}">Assets</a>
-    <a href="{{ "faq" | relURL }}">F.A.Q.</a>
+    <a href="{{ (printf "%s#bundles" ("" | relURL)) }}"><span class="sidebar__num">01</span>Bundles</a>
+    <a href="{{ (printf "%s#assets" ("" | relURL)) }}"><span class="sidebar__num">02</span>Assets</a>
+    <a href="{{ "faq" | relURL }}"><span class="sidebar__num">03</span>F.A.Q.</a>
   </nav>
 
   <div class="sidebar__contact">

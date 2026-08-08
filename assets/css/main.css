@@ -132,16 +132,27 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 }
 
 .sidebar__nav a {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 1.06rem;
   letter-spacing: 0.02em;
+  text-transform: uppercase;
   color: var(--ink);
   padding: 7px 0;
   transition: color 0.2s, transform 0.2s;
 }
 
 .sidebar__nav a:hover { color: var(--accent-ink); transform: translateX(4px); }
+
+.sidebar__num {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--accent);
+}
 
 .sidebar__contact {
   margin-top: auto;
@@ -241,8 +252,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   font-family: var(--font-display);
   font-weight: 600;
   font-size: clamp(1.6rem, 3vw, 2.3rem);
-  letter-spacing: 0;
-  text-transform: none;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   color: var(--ink);
 }
 
@@ -664,9 +675,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   border-left: 3px solid var(--accent);
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.35rem;
-  letter-spacing: 0;
-  text-transform: none;
+  font-size: 1.2rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   color: var(--ink);
 }
 
