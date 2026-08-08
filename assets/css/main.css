@@ -47,21 +47,26 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .fx-canvas {
   position: fixed;
   inset: 0;
-  z-index: 0;
+  z-index: 1;
   pointer-events: none;
 }
 
 .layout {
   position: relative;
-  z-index: 1;
   display: grid;
   grid-template-columns: 340px minmax(0, 1fr);
+  grid-template-rows: auto auto;
   min-height: 100vh;
 }
 
 .main {
+  --pad-x: clamp(24px, 4vw, 64px);
+  position: relative;
+  z-index: 2;
+  grid-column: 2;
+  grid-row: 2;
   min-width: 0;
-  padding: 40px clamp(24px, 4vw, 64px) 80px;
+  padding: 0 var(--pad-x) 80px;
 }
 
 /* ---------- Sidebar ---------- */
@@ -71,6 +76,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   top: 0;
   height: 100vh;
   overflow-y: auto;
+  z-index: 2;
+  grid-column: 1;
+  grid-row: 1 / -1;
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -195,7 +203,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 
 .hero {
   position: relative;
-  margin-bottom: 12px;
+  z-index: 0;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .hero__img {
@@ -356,6 +366,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 
 .back {
   display: inline-block;
+  margin-top: 40px;
   font-family: var(--font-body);
   font-weight: 500;
   font-size: 0.9rem;
@@ -742,10 +753,20 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 @media (max-width: 760px) {
   .layout { grid-template-columns: 1fr; }
   .sidebar {
-    position: static;
+    position: relative;
     height: auto;
     border-right: none;
     border-bottom: 1px solid var(--border);
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .hero {
+    grid-column: auto;
+    grid-row: auto;
+  }
+  .main {
+    grid-column: auto;
+    grid-row: auto;
   }
   .sidebar__contact { margin-top: 8px; }
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }

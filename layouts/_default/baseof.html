@@ -6,6 +6,12 @@
 <body>
   <div class="layout">
     {{ partial "sidebar.html" . }}
+    {{ if .IsHome }}
+      <section class="hero">
+        <img class="hero__img" src="{{ site.Params.heroImage | relURL }}" alt="{{ site.Params.brandName }} banner">
+        <div class="hero__shade"></div>
+      </section>
+    {{ end }}
     <main class="main" id="main">
       {{ block "main" . }}{{ end }}
       <footer class="site-footer">
